@@ -1,0 +1,20 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: zuul-server
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+# route 2 server
+zuul:
+  routes:
+    order-server:
+     path: /order-server/**
+     serviceId: order-server
+    user-server:
+     path: /user-server/**
+     serviceId: user-server
