@@ -1,5 +1,7 @@
 package org.zdb.com.userserver.controller;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +15,10 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
+@RefreshScope
 public class UserController {
+    @Value("${user.name}")
+    private String userName;
     /**
      * Say hello response entity.
      *
@@ -40,5 +45,10 @@ public class UserController {
     public ResponseEntity<String> sayUserHello(@PathVariable("name") String name){
         System.out.println("========spring feign-user-server start===========");
         return ResponseEntity.ok("hello,"+name+":welcome to use user-server");
+    }
+    @GetMapping(value="/showUserName")
+    public ResponseEntity<String> showUserName(){
+        System.out.println("========showUserName===========");
+        return ResponseEntity.ok("用户的名称为"+userName);
     }
 }
