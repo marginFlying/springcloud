@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 @RefreshScope
 public class UserController {
-    @Value("${user.name}")
-    private String user;
+    @Value("${profile}")
+    private String profile;
     /**
      * Say hello response entity.
      *
@@ -48,7 +48,7 @@ public class UserController {
     }
     @GetMapping(value="/showUserName")
     public ResponseEntity<String> showUserName(){
-        System.out.println("========showUserName,名称为:"+user+"===========");
-        return ResponseEntity.ok("用户的名称为"+user);
+        System.out.println("========showUserName,名称为:"+profile+"===========");
+        return ResponseEntity.ok("用户的名称为"+profile);
     }
 }

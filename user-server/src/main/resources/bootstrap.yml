@@ -1,7 +1,6 @@
 spring:
-  application:
-    name: user-server
   cloud:
     config:
+      name: user-server
+      uri: http://10.2.54.42:9008
       profile: dev
-      uri: http://localhost:9008
