@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RefreshScope
 public class UserController {
     @Value("${user.name}")
-    private String userName;
+    private String user;
     /**
      * Say hello response entity.
      *
@@ -49,6 +49,6 @@ public class UserController {
     @GetMapping(value="/showUserName")
     public ResponseEntity<String> showUserName(){
         System.out.println("========showUserName===========");
-        return ResponseEntity.ok("用户的名称为"+userName);
+        return ResponseEntity.ok("用户的名称为"+user);
     }
 }

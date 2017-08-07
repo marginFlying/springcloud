@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hystrix-server
+server:
+  port: 9009
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+     default-zone: http://10.2.54.42:8761/eureka
