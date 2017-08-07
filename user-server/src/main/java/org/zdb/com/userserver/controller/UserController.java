@@ -48,7 +48,7 @@ public class UserController {
     }
     @GetMapping(value="/showUserName")
     public ResponseEntity<String> showUserName(){
-        System.out.println("========showUserName===========");
+        System.out.println("========showUserName,名称为:"+user+"===========");
         return ResponseEntity.ok("用户的名称为"+user);
     }
 }

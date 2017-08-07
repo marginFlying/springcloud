@@ -1,3 +1,6 @@
 spring:
- profiles:
-     active: dev
+  rabbitmq:
+    host: 10.2.54.42
+    port: 5672
+    username: dongbiao.zheng
+    password: Password123!
