@@ -12,9 +12,19 @@ eureka:
 # route 2 server
 zuul:
   routes:
+    # 添加订单的网关
     order-server:
      path: /order-server/**
      serviceId: order-server
+   # 添加用户的网关
     user-server:
      path: /user-server/**
      serviceId: user-server
+  # 添加负载均衡的网关
+    ribbon-server:
+     path: /ribbon-server/**
+     serviceId: ribbon-server
+  # 添加feign的网关
+    feign-server:
+     path: /feign-server/**
+     serverId: feign-server
