@@ -1,0 +1,20 @@
+server:
+  port: 9008
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+     server:
+        git:
+          default-label: master
+          uri:  https://github.com/marginFlying/springcloud/
+          search-paths: config-client
+          username: yinyuxuan2016
+          password: Password123!
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+     default-zone: http://10.2.54.42:8761/eureka
