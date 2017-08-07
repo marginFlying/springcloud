@@ -8,7 +8,7 @@ spring:
      server:
         git:
           default-label: master
-          uri:  https://github.com/marginFlying/springcloud/
+          uri: https://github.com/marginFlying/springcloud/
           search-paths: config-client
           username: yinyuxuan2016
           password: Password123!
