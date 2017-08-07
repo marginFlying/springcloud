@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
-@RefreshScope
 public class UserController {
     @Value("${profile}")
     private String profile;
