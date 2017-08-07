@@ -1,0 +1,3 @@
+env: prod
+user:
+ name: prod-config
