@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @Value("${profile}")
+    @Value("${serverUrl}")
     private String profile;
     /**
      * Say hello response entity.
