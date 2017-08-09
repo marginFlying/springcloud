@@ -5,6 +5,4 @@ spring:
       uri: http://10.2.54.42:9008
       profile: dev
       label: master
-      discovery:
-        enabled: true
-        service-id: config-server
+

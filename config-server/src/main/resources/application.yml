@@ -8,7 +8,8 @@ spring:
      server:
         git:
           uri: https://github.com/marginFlying/springcloud.git
-          search-paths: config-repo
+          # 此处需要注意一下，如果是在本地，不用配置/src/main/,在git上面必须是全路径
+          search-paths: /config-repo/src/main/resources
           username: admin
           password: Password123!
 eureka:
