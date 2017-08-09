@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
     @Value("${serverUrl}")
-    private String profile;
+    private String serverUrl;
     /**
      * Say hello response entity.
      *
@@ -47,7 +47,7 @@ public class UserController {
     }
     @GetMapping(value="/showUserName")
     public ResponseEntity<String> showUserName(){
-        System.out.println("========showUserName,名称为:"+profile+"===========");
-        return ResponseEntity.ok("用户的名称为"+profile);
+        System.out.println("========showUserName,名称为:"+serverUrl+"===========");
+        return ResponseEntity.ok("用户的名称为"+serverUrl);
     }
 }
