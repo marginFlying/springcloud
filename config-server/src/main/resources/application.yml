@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/marginFlying/springcloud.git
           search-paths: config-repo
-          username: yinyuxuan2016
+          username: admin
           password: Password123!
 eureka:
   client:
