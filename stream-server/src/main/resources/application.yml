@@ -1,0 +1,29 @@
+server:
+  port: 9011
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://master:8761/eureka/,http://slave:8761/eureka/
+spring:
+  application:
+    name: stream-server
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: mydest
+          partitionKeyExpression: payload
+          partitionCount: 2
+#        binder: rabbit1
+#      binders:
+#        rabbit1:
+#         type: rabbit
+#         envirment:
+#           spring:
+#             rabbitmq:
+#              host: 10.2.54.42
+#              port: 5672
+#              username: dongbiao.zheng
+#              password: Password123!
