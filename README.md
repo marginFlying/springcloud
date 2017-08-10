@@ -20,5 +20,9 @@
 （网络连接慢，资源紧张，阻塞等）导致某个微服务无法正常提供服务，而作为调用方应该有一种容错机制，来隔离这种异常，
 从而不让一个微服务的异常影响整体的运行（分为两种容错机制：一种是直接使用Hystrix，一种是通过FeignClient）
 
-10：spring-bus-server:该服务主要是消息总线服务：目前支持kafka和RabbitMQ两种消息中间件。（该功能暂定）
+10：spring-bus-server:该服务主要是消息总线服务：目前支持kafka和RabbitMQ两种消息中间件。
+在config-server、user-server和order-server中演示了消息总线更新配置信息。
+1）management.security.enabled: false 使得该服务可以直接使用/bus/refresh接口。
+2）可以参考config-server中的配置和userController和orderController两个控制类，使用@RefreshScope接口进行接受刷新配置信息。
+3）使用rabbitMQ进行消息总线的消息传递
 
