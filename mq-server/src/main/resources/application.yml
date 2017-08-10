@@ -1,0 +1,18 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: mq-server
+    # rabbitmqµÄÅäÖÃ
+  rabbitmq:
+    host: 10.2.54.42
+    port: 5672
+    password: Password123!
+    username: dongbiao.zheng
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+     defaultZone: http://master:8761/eureka/,http://slave:8761/eureka/
+
