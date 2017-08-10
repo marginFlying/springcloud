@@ -1,8 +1,15 @@
 spring:
+  rabbitmq:
+      host: 10.2.54.42
+      port: 5672
+      username: dongbiao.zheng
+      password: Password123!
   cloud:
     config:
       name: user-server
       uri: http://10.2.54.42:9008
       profile: dev
       label: master
-
+management:
+  security:
+    enabled: false

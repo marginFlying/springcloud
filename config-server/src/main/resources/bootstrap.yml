@@ -4,6 +4,3 @@ spring:
     port: 5672
     username: dongbiao.zheng
     password: Password123!
-management:
-  security:
-    enabled: false
