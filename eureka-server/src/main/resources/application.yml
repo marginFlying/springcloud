@@ -8,6 +8,9 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://slave:8761/eureka
+     # 注册中心去除自我保护机制，将不可用的服务剔除掉，默认是受保护的。
+  server:
+    enable-self-preservation: false
 spring:
   application:
     name: eureka-server
