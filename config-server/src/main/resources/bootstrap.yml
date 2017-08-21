@@ -4,6 +4,7 @@ spring:
     port: 5672
     username: dongbiao.zheng
     password: Password123!
+    virtual-host: dev
 management:
   security:
     enabled: false

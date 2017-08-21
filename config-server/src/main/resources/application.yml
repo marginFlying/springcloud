@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/marginFlying/springcloud.git
           # 此处需要注意一下，如果是在本地，不用配置/src/main/,在git上面必须是全路径
           search-paths: /config-repo/src/main/resources
-          username: admin
+          username: yinyuxuan2016
           password: Password123!
 eureka:
   client:

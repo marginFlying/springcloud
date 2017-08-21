@@ -3,12 +3,13 @@ server:
 spring:
   application:
     name: mq-server
-    # rabbitmqµÄÅäÖÃ
+    # rabbitmqï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   rabbitmq:
     host: 10.2.54.42
     port: 5672
     password: Password123!
     username: dongbiao.zheng
+    virtual-host: dev
 eureka:
   client:
     register-with-eureka: true
